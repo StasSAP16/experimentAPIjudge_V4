@@ -1,0 +1,61 @@
+{
+  "timestamp": "2026-04-28T17-46-23-669Z",
+  "activity_name": "Record the data of each patient",
+  "model": "DeepSeek",
+  "error": null,
+  "llm_result": {
+    "activity_name": "Record the data of the patient",
+    "step_mappings": [
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 2,
+            "description": "Prepare the registration form or system"
+          }
+        ],
+        "response_steps": [
+          {
+            "step_number": 1,
+            "description": "Open the Hospital Information System (HIS) and navigate to the patient registration module."
+          },
+          {
+            "step_number": 2,
+            "description": "Select the option to create a new patient record."
+          }
+        ],
+        "match_type": "Granularity Difference",
+        "confidence": 90,
+        "explanation": "The ground truth step describes the general action of preparing for registration. The response steps provide more granular details on how to prepare the system by opening the HIS and navigating to the patient registration module, and then selecting to create a new record."
+      },
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 3,
+            "description": "Begin collecting patient information"
+          }
+        ],
+        "response_steps": [
+          {
+            "step_number": 3,
+            "description": "Enter the patient's basic demographic information including date of birth, gender, address, and contact number."
+          },
+          {
+            "step_number": 4,
+            "description": "Verify the entered information for accuracy and save the initial record."
+          }
+        ],
+        "match_type": "Granularity Difference",
+        "confidence": 95,
+        "explanation": "The ground truth step broadly states 'begin collecting patient information'. The response steps detail this collection process by specifying entering demographic information, verifying it, and saving the record, which are all components of collecting and recording patient data."
+      }
+    ],
+    "unmatched_ground_truth_steps": [
+      {
+        "step_number": 1,
+        "description": "Greet the patient and explain the registration process",
+        "reason": "This step involves direct patient interaction and explaining the process, which is not covered by any of the response steps that focus solely on system-based data recording."
+      }
+    ],
+    "unmatched_response_steps": []
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "timestamp": "2026-04-28T17-46-47-802Z",
+  "activity_name": "Register the Surname of the patient",
+  "model": "DeepSeek",
+  "error": null,
+  "llm_result": {
+    "activity_name": "Register the Surname of the patient",
+    "step_mappings": [
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 1,
+            "description": "Ask the patient for their surname (last name)"
+          }
+        ],
+        "response_steps": [
+          {
+            "step_number": 1,
+            "description": "Refer to the patient's official ID to identify the legal surname (family name)."
+          }
+        ],
+        "match_type": "Granularity Difference",
+        "confidence": 80,
+        "explanation": "Both steps aim to identify/obtain the patient's surname. The ground truth suggests asking the patient directly, while the response specifies referring to an official ID, indicating a more formal and detailed method for the initial identification of the surname."
+      },
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 2,
+            "description": "Confirm the spelling of the surname with the patient"
+          }
+        ],
+        "response_steps": [
+          {
+            "step_number": 3,
+            "description": "Double-check the spelling against the ID and ask the patient to confirm."
+          }
+        ],
+        "match_type": "Functional Equivalence",
+        "confidence": 95,
+        "explanation": "Both steps describe the action of confirming the spelling of the surname with the patient. The response step adds an additional verification layer by double-checking against an ID, making it a more robust confirmation process."
+      },
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 3,
+            "description": "Enter the surname into the registration system"
+          }
+        ],
+        "response_steps": [
+          {
+            "step_number": 2,
+            "description": "Enter the surname exactly as printed on the ID into the surname field in the HIS."
+          }
+        ],
+        "match_type": "Functional Equivalence",
+        "confidence": 95,
+        "explanation": "Both steps involve entering the surname into a system. 'Registration system' and 'HIS' (Hospital Information System) are functionally equivalent. The response provides more specific instructions on how and where to enter the surname (exactly as printed on ID, into the surname field)."
+      }
+    ],
+    "unmatched_ground_truth_steps": [],
+    "unmatched_response_steps": [
+      {
+        "step_number": 4,
+        "description": "Save the surname entry to the patient record.",
+        "reason": "This step describes the action of saving or committing the entered data, which is a distinct action following data entry. It is not explicitly covered by any of the ground truth steps, which focus on asking, confirming, and entering."
+      }
+    ]
+  }
+}

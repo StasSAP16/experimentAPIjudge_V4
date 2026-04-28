@@ -1,0 +1,70 @@
+{
+  "timestamp": "2026-04-28T17-46-30-075Z",
+  "activity_name": "Register the SSN of the patient",
+  "model": "DeepSeek",
+  "error": null,
+  "llm_result": {
+    "activity_name": "Register the SSN of the patient",
+    "step_mappings": [
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 1,
+            "description": "Ask the patient for their Social Security Number (SSN)"
+          }
+        ],
+        "response_steps": [
+          {
+            "step_number": 1,
+            "description": "Ask the patient for their Social Security Number (SSN) and request to see their Social Security card or official document."
+          }
+        ],
+        "match_type": "Granularity Difference",
+        "confidence": 95,
+        "explanation": "The response step expands on the ground truth step by including an additional verification action (requesting to see the card or document), but the primary action of asking for the SSN is the same."
+      },
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 3,
+            "description": "Input the SSN into the registration system"
+          }
+        ],
+        "response_steps": [
+          {
+            "step_number": 2,
+            "description": "Enter the SSN into the designated field in the HIS."
+          }
+        ],
+        "match_type": "Functional Equivalence",
+        "confidence": 95,
+        "explanation": "Both steps describe the action of entering the SSN into a system. 'Input' is equivalent to 'Enter,' and 'registration system' is a general term for which 'HIS' (Hospital Information System) is a specific example."
+      },
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 2,
+            "description": "Verify the SSN format for accuracy"
+          }
+        ],
+        "response_steps": [
+          {
+            "step_number": 3,
+            "description": "Re-enter the SSN to confirm accuracy and validate the entry against the document."
+          }
+        ],
+        "match_type": "Functional Equivalence",
+        "confidence": 90,
+        "explanation": "Both steps aim to ensure the accuracy of the SSN. The ground truth focuses on format verification, while the response uses re-entry and validation against a document, which are methods to achieve accuracy verification. Response step 3 implicitly covers format accuracy as part of validation."
+      }
+    ],
+    "unmatched_ground_truth_steps": [],
+    "unmatched_response_steps": [
+      {
+        "step_number": 4,
+        "description": "Save the SSN record in the patient's profile.",
+        "reason": "This step describes a distinct action of saving the record, which is not explicitly detailed as a separate step in the ground truth, although it would be an implicit outcome of 'inputting into the registration system'."
+      }
+    ]
+  }
+}

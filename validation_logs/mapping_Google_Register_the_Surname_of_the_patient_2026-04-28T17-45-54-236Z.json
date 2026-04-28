@@ -1,0 +1,53 @@
+{
+  "timestamp": "2026-04-28T17-45-54-236Z",
+  "activity_name": "Register the Surname of the patient",
+  "model": "Google",
+  "error": null,
+  "llm_result": {
+    "activity_name": "Register the Surname of the patient",
+    "step_mappings": [
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 1,
+            "description": "Ask the patient for their surname (last name)"
+          }
+        ],
+        "response_steps": [
+          {
+            "step_number": 1,
+            "description": "Read the patient's family name from the official identification."
+          }
+        ],
+        "match_type": "Functional Equivalence",
+        "confidence": 90,
+        "explanation": "Both steps describe the initial action of acquiring the patient's surname/family name. The ground truth suggests asking the patient directly, while the response suggests reading from official identification. Despite the different methods, the core function of obtaining the name is equivalent."
+      },
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 3,
+            "description": "Enter the surname into the registration system"
+          }
+        ],
+        "response_steps": [
+          {
+            "step_number": 2,
+            "description": "Enter the patient's family name into the HIS."
+          }
+        ],
+        "match_type": "Functional Equivalence",
+        "confidence": 95,
+        "explanation": "Both steps describe the action of inputting the patient's surname/family name into the relevant system. 'Surname' and 'family name' are synonyms, and 'registration system' and 'HIS' (Hospital Information System) are contextually equivalent for this process."
+      }
+    ],
+    "unmatched_ground_truth_steps": [
+      {
+        "step_number": 2,
+        "description": "Confirm the spelling of the surname with the patient",
+        "reason": "This step, which involves verifying the spelling of the surname with the patient, is not present or explicitly covered in the response steps. The response's method of reading from official identification might implicitly reduce the need for verbal confirmation, but it's not an explicit step."
+      }
+    ],
+    "unmatched_response_steps": []
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "role": "Senior Business Process Management (BPM) Analyst",
+  "specialization": "Healthcare administration and patient flow optimization",
+  "experience": "15+ years",
+  "context": "You are decomposing a standard in-person patient registration process at a hospital front desk to create a step-by-step Standard Operating Procedure (SOP). The staff member has access to a Hospital Information System (HIS), a document scanner, and a printer. Your output will be used as a training checklist for new front-desk registration staff.",
+  "task": "Decompose each high-level activity from the provided list into a sequence of granular, executable substeps that a staff member can follow without guesswork.",
+  "input": {
+    "process_name": "Patient Registers in the hospital",
+    "activities": [
+      { "activity_id": "A1", "activity_name": "Record the data of the patient", "description": "Create initial patient record in the hospital information system and collect basic demographic information" },
+      { "activity_id": "A2", "activity_name": "Register the SSN of the patient", "description": "Capture and validate patient's Social Security Number for insurance and identification" },
+      { "activity_id": "A3", "activity_name": "Register the Name of the patient", "description": "Record patient's legal first and middle name(s) from official ID" },
+      { "activity_id": "A4", "activity_name": "Register the Surname of the patient", "description": "Record patient's family name for records and billing" },
+      { "activity_id": "A5", "activity_name": "Print referral document", "description": "Generate and print official registration confirmation for consultation" },
+      { "activity_id": "A6", "activity_name": "Archive the registration record", "description": "Store completed registration record securely for compliance and retrieval" }
+    ]
+  },
+  "output_format": {
+    "structure": "Return a valid JSON object with a single key \"decomposition_result\" containing an array of decomposed activities.",
+    "schema": {
+      "decomposition_result": [
+        {
+          "activity_id": "String. Must exactly match the input.",
+          "activity_name": "String. MUST EXACTLY MATCH the 'activity_name' from input, character-for-character, including spaces and punctuation. Do not paraphrase, reword, or modify.",
+          "substeps": [
+            {
+              "step_number": "Integer. Sequential starting from 1.",
+              "description": "String. Single atomic instruction starting with an imperative verb."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "decomposition_rules": {
+    "granularity_rule": "Aim for 3 to 5 substeps per activity. Keep it minimal if the description is simple.",
+    "atomicity_rule": "Each substep must be one observable staff action with one clear outcome.",
+    "hierarchy_rule": "Treat each input activity as independent. Do not merge steps across activities.",
+    "content_constraints": [
+      "Describe ONLY observable staff actions and direct interactions.",
+      "Do NOT describe internal system processes or background checks.",
+      "Do NOT include clinical judgment or medical advice.",
+      "Base decomposition STRICTLY on the 'description' field. Do not infer extra steps."
+    ],
+    "quality_criteria": [
+      "Logical Flow: Correct practical order.",
+      "Clarity & Actionability: Unambiguous direct commands.",
+      "Completeness: Fully accomplishes the activity goal.",
+      "Format Compliance: Every description starts with an imperative verb.",
+      "Name Integrity: activity_name MUST be copied verbatim from input — no modifications allowed."
+    ]
+  },
+  "final_instruction": "Process 'input.activities'. Apply all rules. Output ONLY a single JSON object with the key \"decomposition_result\" containing the array. CRITICAL: Every activity_name in your output must match the input activity_name EXACTLY, character-for-character. No markdown, no extra text, no explanations."
+}

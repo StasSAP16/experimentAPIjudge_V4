@@ -1,0 +1,122 @@
+[
+  {
+    "activity_id": "A1",
+    "activity_name": "Record the data of the patient",
+    "substeps": [
+      {
+        "step_number": 1,
+        "description": "Access the Hospital Information System (HIS)."
+      },
+      {
+        "step_number": 2,
+        "description": "Navigate to the 'New Patient Registration' module."
+      },
+      {
+        "step_number": 3,
+        "description": "Enter basic demographic information (e.g., date of birth, gender, address) into the HIS."
+      },
+      {
+        "step_number": 4,
+        "description": "Save the initial patient record in the HIS."
+      }
+    ]
+  },
+  {
+    "activity_id": "A2",
+    "activity_name": "Register the SSN of the patient",
+    "substeps": [
+      {
+        "step_number": 1,
+        "description": "Request the patient's Social Security Number (SSN)."
+      },
+      {
+        "step_number": 2,
+        "description": "Enter the patient's SSN into the designated field in the HIS."
+      },
+      {
+        "step_number": 3,
+        "description": "Verify the entered SSN for accuracy against the provided information."
+      }
+    ]
+  },
+  {
+    "activity_id": "A3",
+    "activity_name": "Register the Name of the patient",
+    "substeps": [
+      {
+        "step_number": 1,
+        "description": "Request the patient's official identification (e.g., driver's license, passport)."
+      },
+      {
+        "step_number": 2,
+        "description": "Read the patient's legal first and middle name(s) from the official ID."
+      },
+      {
+        "step_number": 3,
+        "description": "Enter the patient's legal first and middle name(s) into the HIS."
+      }
+    ]
+  },
+  {
+    "activity_id": "A4",
+    "activity_name": "Register the Surname of the patient",
+    "substeps": [
+      {
+        "step_number": 1,
+        "description": "Read the patient's family name from the official identification."
+      },
+      {
+        "step_number": 2,
+        "description": "Enter the patient's family name into the HIS."
+      }
+    ]
+  },
+  {
+    "activity_id": "A5",
+    "activity_name": "Print referral document",
+    "substeps": [
+      {
+        "step_number": 1,
+        "description": "Navigate to the 'Print Documents' section in the HIS."
+      },
+      {
+        "step_number": 2,
+        "description": "Select the 'Registration Confirmation' document template."
+      },
+      {
+        "step_number": 3,
+        "description": "Generate the registration confirmation document."
+      },
+      {
+        "step_number": 4,
+        "description": "Send the document to the printer."
+      },
+      {
+        "step_number": 5,
+        "description": "Retrieve the printed registration confirmation document from the printer."
+      }
+    ]
+  },
+  {
+    "activity_id": "A6",
+    "activity_name": "Archive the registration record",
+    "substeps": [
+      {
+        "step_number": 1,
+        "description": "Scan the completed physical registration documents using the document scanner."
+      },
+      {
+        "step_number": 2,
+        "description": "Verify the scanned image quality and completeness."
+      },
+      {
+        "step_number": 3,
+        "description": "Upload the scanned documents to the designated digital archive in the HIS."
+      },
+      {
+        "step_number": 4,
+        "description": "File the physical registration documents in the secure storage location."
+      }
+    ]
+  }
+]

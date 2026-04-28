@@ -1,0 +1,52 @@
+{
+  "timestamp": "2026-04-28T17-45-47-105Z",
+  "activity_name": "Register the Name of the patient",
+  "model": "Google",
+  "error": null,
+  "llm_result": {
+    "activity_name": "Register the Name of the patient",
+    "step_mappings": [
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 3,
+            "description": "Enter the name into the registration system"
+          }
+        ],
+        "response_steps": [
+          {
+            "step_number": 3,
+            "description": "Enter the patient's legal first and middle name(s) into the HIS."
+          }
+        ],
+        "match_type": "Functional Equivalence",
+        "confidence": 95,
+        "explanation": "Both steps describe the action of entering the patient's name into a system. 'Registration system' and 'HIS' (Hospital Information System) are functionally equivalent in this context, and the slight difference in name specificity ('name' vs 'legal first and middle name(s)') does not alter the core action."
+      }
+    ],
+    "unmatched_ground_truth_steps": [
+      {
+        "step_number": 1,
+        "description": "Ask the patient for their first name",
+        "reason": "The response process obtains the patient's name by requesting and reading from official identification, rather than directly asking the patient. This represents a different method of information gathering."
+      },
+      {
+        "step_number": 2,
+        "description": "Confirm the spelling of the name with the patient",
+        "reason": "The response process relies on the accuracy of official identification for the patient's name and does not include a step for verbally confirming the spelling with the patient."
+      }
+    ],
+    "unmatched_response_steps": [
+      {
+        "step_number": 1,
+        "description": "Request the patient's official identification (e.g., driver's license, passport).",
+        "reason": "The ground truth process obtains the patient's name by directly asking them, not by requesting official identification."
+      },
+      {
+        "step_number": 2,
+        "description": "Read the patient's legal first and middle name(s) from the official ID.",
+        "reason": "The ground truth process obtains the patient's name by directly asking them, not by reading it from official identification."
+      }
+    ]
+  }
+}
