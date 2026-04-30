@@ -6,12 +6,12 @@ const fs = require('fs');
 const LLM_CONFIGS = {
     deepseek: {
         url: 'https://api.deepseek.com/chat/completions',
-        key: 'sk-857bcd8fc0194d4da89197fa2b8416fb',
+        key: 'xxx',
         model: 'deepseek-chat'
     },
     gemini: {
         url: 'https://generativelanguage.googleapis.com/v1beta/openai/chat/completions',
-        key: 'AIzaSyDY7xz6UBMmNadjT_DTXFgExC6QmYPMudo',
+        key: 'xxx',
         model: 'gemini-2.5-flash'
     }
 };
