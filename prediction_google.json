@@ -9,11 +9,11 @@
       },
       {
         "step_number": 2,
-        "description": "Navigate to the 'New Patient Registration' module."
+        "description": "Navigate to the new patient registration module."
       },
       {
         "step_number": 3,
-        "description": "Enter basic demographic information (e.g., date of birth, gender, address) into the HIS."
+        "description": "Enter basic demographic information provided by the patient into the HIS."
       },
       {
         "step_number": 4,
@@ -31,11 +31,11 @@
       },
       {
         "step_number": 2,
-        "description": "Enter the patient's SSN into the designated field in the HIS."
+        "description": "Enter the SSN into the designated field in the HIS."
       },
       {
         "step_number": 3,
-        "description": "Verify the entered SSN for accuracy against the provided information."
+        "description": "Verify the entered SSN for accuracy with the patient."
       }
     ]
   },
@@ -45,15 +45,15 @@
     "substeps": [
       {
         "step_number": 1,
-        "description": "Request the patient's official identification (e.g., driver's license, passport)."
+        "description": "Request the patient's official identification document."
       },
       {
         "step_number": 2,
-        "description": "Read the patient's legal first and middle name(s) from the official ID."
+        "description": "Read the patient's legal first and middle name(s) from the ID."
       },
       {
         "step_number": 3,
-        "description": "Enter the patient's legal first and middle name(s) into the HIS."
+        "description": "Enter the first and middle name(s) into the HIS."
       }
     ]
   },
@@ -63,11 +63,15 @@
     "substeps": [
       {
         "step_number": 1,
-        "description": "Read the patient's family name from the official identification."
+        "description": "Read the patient's family name from the official identification document."
       },
       {
         "step_number": 2,
-        "description": "Enter the patient's family name into the HIS."
+        "description": "Enter the family name into the HIS."
+      },
+      {
+        "step_number": 3,
+        "description": "Confirm the spelling of the family name with the patient."
       }
     ]
   },
@@ -77,45 +81,37 @@
     "substeps": [
       {
         "step_number": 1,
-        "description": "Navigate to the 'Print Documents' section in the HIS."
+        "description": "Access the referral document generation function in the HIS."
       },
       {
         "step_number": 2,
-        "description": "Select the 'Registration Confirmation' document template."
+        "description": "Generate the official registration confirmation document."
       },
       {
         "step_number": 3,
-        "description": "Generate the registration confirmation document."
-      },
-      {
-        "step_number": 4,
         "description": "Send the document to the printer."
       },
       {
-        "step_number": 5,
-        "description": "Retrieve the printed registration confirmation document from the printer."
+        "step_number": 4,
+        "description": "Retrieve the printed referral document from the printer."
       }
     ]
   },
   {
     "activity_id": "A6",
-    "activity_name": "Archive the registration record",
+    "activity_name": "Archive the record in file system",
     "substeps": [
       {
         "step_number": 1,
-        "description": "Scan the completed physical registration documents using the document scanner."
+        "description": "Access the patient's completed registration record in the HIS."
       },
       {
         "step_number": 2,
-        "description": "Verify the scanned image quality and completeness."
+        "description": "Select the 'Archive Record' function within the HIS."
       },
       {
         "step_number": 3,
-        "description": "Upload the scanned documents to the designated digital archive in the HIS."
-      },
-      {
-        "step_number": 4,
-        "description": "File the physical registration documents in the secure storage location."
+        "description": "Confirm the successful archiving of the digital record."
       }
     ]
   }

@@ -1,0 +1,68 @@
+{
+  "timestamp": "2026-05-02T11-22-55-694Z",
+  "activity_name": "Register the Name of the patient",
+  "model": "DeepSeek",
+  "error": null,
+  "llm_result": {
+    "activity_name": "Register the Name of the patient",
+    "step_mappings": [
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 1,
+            "description": "Ask the patient for their first name"
+          }
+        ],
+        "response_steps": [
+          {
+            "step_number": 1,
+            "description": "Ask the patient for their legal first and middle name(s) as shown on their official ID."
+          }
+        ],
+        "match_type": "Granularity Difference",
+        "confidence": 95,
+        "explanation": "The response step is more detailed, specifying 'legal,' 'middle name(s),' and 'official ID,' while the ground truth is a more general instruction to ask for the first name. Both cover the core action of asking for the patient's name."
+      },
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 2,
+            "description": "Confirm the spelling of the name with the patient"
+          }
+        ],
+        "response_steps": [
+          {
+            "step_number": 4,
+            "description": "Review the entered name for spelling errors and correct if necessary."
+          }
+        ],
+        "match_type": "Functional Equivalence",
+        "confidence": 90,
+        "explanation": "Both steps aim to ensure the correct spelling of the name. The ground truth specifies confirming 'with the patient,' while the response specifies 'reviewing' and correcting, which implicitly covers the confirmation aspect, potentially with the patient or against documentation."
+      },
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 3,
+            "description": "Enter the name into the registration system"
+          }
+        ],
+        "response_steps": [
+          {
+            "step_number": 2,
+            "description": "Type the first name into the 'First Name' field in the HIS."
+          },
+          {
+            "step_number": 3,
+            "description": "Type the middle name(s) into the 'Middle Name' field in the HIS."
+          }
+        ],
+        "match_type": "Granularity Difference",
+        "confidence": 95,
+        "explanation": "The ground truth step is a higher-level instruction to enter the name into the system. The response breaks this down into two more specific actions: entering the first name and entering the middle name, also specifying the system (HIS) and fields."
+      }
+    ],
+    "unmatched_ground_truth_steps": [],
+    "unmatched_response_steps": []
+  }
+}

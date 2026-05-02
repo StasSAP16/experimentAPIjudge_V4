@@ -6,12 +6,12 @@ const fs = require('fs');
 const LLM_CONFIGS = {
     deepseek: {
         url: 'https://api.deepseek.com/chat/completions',
-        key: 'xxx',
+        key: 'ххх',
         model: 'deepseek-chat'
     },
     gemini: {
         url: 'https://generativelanguage.googleapis.com/v1beta/openai/chat/completions',
-        key: 'xxx',
+        key: 'ххх',
         model: 'gemini-2.5-flash'
     }
 };
@@ -21,7 +21,7 @@ const LLM_CONFIGS = {
 // ==========================================
 const SYSTEM_MESSAGE = `You are an AI assistant specialized in comparing and mapping steps in business processes. Your task is to analyze the ground truth steps and the response steps for a given business process activity, determine the best mappings between steps based on semantic similarity, and provide a structured output of the relationships. Follow these guidelines:
 
-1. Step Matching: Compare each ground truth step with each response step. Determine best matches based on semantic similarity. Group steps if granularity differs.
+1. Step Matching: Compare each ground truth step with each response step. Determine best matches based on semantic similarity. Group steps if granularity differs. 
 2. Matching Criteria (Assign one of these to each match):
     - Identical Match: Steps are identical or nearly identical in wording and meaning.
     - Functional Equivalence: Steps describe the same action/outcome using different words.

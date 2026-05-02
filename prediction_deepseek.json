@@ -5,19 +5,19 @@
     "substeps": [
       {
         "step_number": 1,
-        "description": "Open the Hospital Information System (HIS) and navigate to the patient registration module."
+        "description": "Open the Hospital Information System (HIS) and select the 'New Patient Registration' module."
       },
       {
         "step_number": 2,
-        "description": "Select the option to create a new patient record."
+        "description": "Enter the patient's basic demographic information into the required fields."
       },
       {
         "step_number": 3,
-        "description": "Enter the patient's basic demographic information including date of birth, gender, address, and contact number."
+        "description": "Verify the entered data for accuracy and completeness."
       },
       {
         "step_number": 4,
-        "description": "Verify the entered information for accuracy and save the initial record."
+        "description": "Save the initial patient record in the HIS."
       }
     ]
   },
@@ -27,7 +27,7 @@
     "substeps": [
       {
         "step_number": 1,
-        "description": "Ask the patient for their Social Security Number (SSN) and request to see their Social Security card or official document."
+        "description": "Request the patient's Social Security Number (SSN) from their official identification document."
       },
       {
         "step_number": 2,
@@ -35,11 +35,11 @@
       },
       {
         "step_number": 3,
-        "description": "Re-enter the SSN to confirm accuracy and validate the entry against the document."
+        "description": "Validate the SSN format and check for any duplicate records."
       },
       {
         "step_number": 4,
-        "description": "Save the SSN record in the patient's profile."
+        "description": "Confirm the SSN entry and save the record."
       }
     ]
   },
@@ -49,19 +49,19 @@
     "substeps": [
       {
         "step_number": 1,
-        "description": "Request the patient's official government-issued photo ID (e.g., driver's license or passport)."
+        "description": "Ask the patient for their legal first and middle name(s) as shown on their official ID."
       },
       {
         "step_number": 2,
-        "description": "Locate the patient's legal first name and middle name(s) on the ID."
+        "description": "Type the first name into the 'First Name' field in the HIS."
       },
       {
         "step_number": 3,
-        "description": "Type the first name and middle name(s) exactly as shown on the ID into the corresponding fields in the HIS."
+        "description": "Type the middle name(s) into the 'Middle Name' field in the HIS."
       },
       {
         "step_number": 4,
-        "description": "Review the entered name for typos and confirm with the patient before saving."
+        "description": "Review the entered name for spelling errors and correct if necessary."
       }
     ]
   },
@@ -71,19 +71,19 @@
     "substeps": [
       {
         "step_number": 1,
-        "description": "Refer to the patient's official ID to identify the legal surname (family name)."
+        "description": "Ask the patient for their legal surname (family name) as shown on their official ID."
       },
       {
         "step_number": 2,
-        "description": "Enter the surname exactly as printed on the ID into the surname field in the HIS."
+        "description": "Type the surname into the 'Last Name' field in the HIS."
       },
       {
         "step_number": 3,
-        "description": "Double-check the spelling against the ID and ask the patient to confirm."
+        "description": "Verify the spelling against the ID document."
       },
       {
         "step_number": 4,
-        "description": "Save the surname entry to the patient record."
+        "description": "Save the surname entry in the patient record."
       }
     ]
   },
@@ -93,45 +93,41 @@
     "substeps": [
       {
         "step_number": 1,
-        "description": "Navigate to the registration confirmation or referral document template in the HIS."
+        "description": "Navigate to the 'Print Referral' option in the HIS."
       },
       {
         "step_number": 2,
-        "description": "Select the patient's record and generate the referral document."
+        "description": "Select the correct patient record and confirm the referral details."
       },
       {
         "step_number": 3,
-        "description": "Send the document to the connected printer."
+        "description": "Click 'Print' to generate the referral document on the connected printer."
       },
       {
         "step_number": 4,
-        "description": "Retrieve the printed document from the printer and verify that all details are correct."
-      },
-      {
-        "step_number": 5,
-        "description": "Hand the printed referral document to the patient."
+        "description": "Retrieve the printed document from the printer and hand it to the patient."
       }
     ]
   },
   {
     "activity_id": "A6",
-    "activity_name": "Archive the registration record",
+    "activity_name": "Archive the record in file system",
     "substeps": [
       {
         "step_number": 1,
-        "description": "Ensure all patient data fields in the HIS are complete and saved."
+        "description": "Scan any paper documents (e.g., signed forms) using the document scanner."
       },
       {
         "step_number": 2,
-        "description": "Scan any paper documents (e.g., ID copy, insurance card) using the document scanner."
+        "description": "Attach the scanned files to the patient's electronic record in the HIS."
       },
       {
         "step_number": 3,
-        "description": "Attach the scanned images to the patient's electronic record in the HIS."
+        "description": "Mark the registration record as 'Complete' and 'Archived' in the system."
       },
       {
         "step_number": 4,
-        "description": "Mark the registration record as 'Archived' or 'Complete' in the system for compliance and future retrieval."
+        "description": "Store the physical documents in the designated filing cabinet for secure retention."
       }
     ]
   }

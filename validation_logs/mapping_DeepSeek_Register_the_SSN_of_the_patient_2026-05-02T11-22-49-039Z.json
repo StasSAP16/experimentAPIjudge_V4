@@ -1,0 +1,70 @@
+{
+  "timestamp": "2026-05-02T11-22-49-039Z",
+  "activity_name": "Register the SSN of the patient",
+  "model": "DeepSeek",
+  "error": null,
+  "llm_result": {
+    "activity_name": "Register the SSN of the patient",
+    "step_mappings": [
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 1,
+            "description": "Ask the patient for their Social Security Number (SSN)"
+          }
+        ],
+        "response_steps": [
+          {
+            "step_number": 1,
+            "description": "Request the patient's Social Security Number (SSN) from their official identification document."
+          }
+        ],
+        "match_type": "Functional Equivalence",
+        "confidence": 95,
+        "explanation": "Both steps describe the action of obtaining the patient's SSN. The response step adds detail about requesting it from an official identification document, but the core function is the same."
+      },
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 2,
+            "description": "Verify the SSN format for accuracy"
+          }
+        ],
+        "response_steps": [
+          {
+            "step_number": 3,
+            "description": "Validate the SSN format and check for any duplicate records."
+          }
+        ],
+        "match_type": "Granularity Difference",
+        "confidence": 90,
+        "explanation": "The ground truth step focuses on verifying the SSN format. The response step includes this verification ('Validate the SSN format') but also adds an additional check for duplicate records, making it a broader validation step."
+      },
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 3,
+            "description": "Input the SSN into the registration system"
+          }
+        ],
+        "response_steps": [
+          {
+            "step_number": 2,
+            "description": "Enter the SSN into the designated field in the HIS."
+          }
+        ],
+        "match_type": "Functional Equivalence",
+        "confidence": 95,
+        "explanation": "Both steps describe the action of entering the SSN into a system. The response step specifies 'HIS' and 'designated field', providing more context but maintaining the same core function."
+      }
+    ],
+    "unmatched_ground_truth_steps": [],
+    "unmatched_response_steps": [
+      {
+        "step_number": 4,
+        "description": "Confirm the SSN entry and save the record.",
+        "reason": "This step describes the finalization and saving of the SSN entry, which is not explicitly covered as a distinct step in the ground truth. The ground truth stops at 'Input the SSN'."
+      }
+    ]
+  }
+}

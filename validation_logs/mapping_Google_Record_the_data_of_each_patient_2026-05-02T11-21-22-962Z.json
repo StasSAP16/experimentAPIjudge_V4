@@ -1,0 +1,63 @@
+{
+  "timestamp": "2026-05-02T11-21-22-962Z",
+  "activity_name": "Record the data of each patient",
+  "model": "Google",
+  "error": null,
+  "llm_result": {
+    "activity_name": "Record the data of the patient",
+    "step_mappings": [
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 2,
+            "description": "Prepare the registration form or system"
+          }
+        ],
+        "response_steps": [
+          {
+            "step_number": 1,
+            "description": "Access the Hospital Information System (HIS)."
+          },
+          {
+            "step_number": 2,
+            "description": "Navigate to the new patient registration module."
+          }
+        ],
+        "match_type": "Granularity Difference",
+        "confidence": 90,
+        "explanation": "Ground truth step 2 describes the general preparation of either a physical form or a system. Response steps 1 and 2 detail the specific actions required to prepare the 'system' (HIS) for registration, thus providing a more granular breakdown of one aspect of the ground truth step."
+      },
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 3,
+            "description": "Begin collecting patient information"
+          }
+        ],
+        "response_steps": [
+          {
+            "step_number": 3,
+            "description": "Enter basic demographic information provided by the patient into the HIS."
+          }
+        ],
+        "match_type": "Functional Equivalence",
+        "confidence": 95,
+        "explanation": "Ground truth step 3 broadly states to 'begin collecting patient information'. Response step 3 describes a specific action that fulfills this requirement: 'entering basic demographic information' into the system, which is the initial phase of collecting information."
+      }
+    ],
+    "unmatched_ground_truth_steps": [
+      {
+        "step_number": 1,
+        "description": "Greet the patient and explain the registration process",
+        "reason": "This step involves direct patient interaction and communication regarding the process, which is not covered by any of the response steps that focus solely on system access and data entry."
+      }
+    ],
+    "unmatched_response_steps": [
+      {
+        "step_number": 4,
+        "description": "Save the initial patient record in the HIS.",
+        "reason": "This step describes the action of saving the collected data. The ground truth steps cover preparing and beginning to collect information but do not explicitly mention the act of saving or finalizing the record."
+      }
+    ]
+  }
+}

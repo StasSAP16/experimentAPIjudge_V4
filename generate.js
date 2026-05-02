@@ -3,12 +3,12 @@ const fs = require('fs');
 const LLM_CONFIGS = {
     deepseek: {
         url: 'https://api.deepseek.com/chat/completions',
-        key: 'xxxx',
+        key: 'ххх',
         model: 'deepseek-chat'
     },
     gemini: {
         url: 'https://generativelanguage.googleapis.com/v1beta/openai/chat/completions',
-        key: 'xxx',
+        key: 'ххх',
         model: 'gemini-2.5-flash'
     }
 };

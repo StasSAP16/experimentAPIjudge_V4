@@ -1,0 +1,68 @@
+{
+  "timestamp": "2026-05-02T11-23-27-437Z",
+  "activity_name": "Archive the record in file system",
+  "model": "DeepSeek",
+  "error": null,
+  "llm_result": {
+    "activity_name": "Archive the record in file system",
+    "step_mappings": [
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 1,
+            "description": "Prepare the patient's record for archiving"
+          }
+        ],
+        "response_steps": [
+          {
+            "step_number": 1,
+            "description": "Scan any paper documents (e.g., signed forms) using the document scanner."
+          },
+          {
+            "step_number": 2,
+            "description": "Attach the scanned files to the patient's electronic record in the HIS."
+          }
+        ],
+        "match_type": "Granularity Difference",
+        "confidence": 90,
+        "explanation": "The ground truth step describes a broad 'preparation' phase. The response steps detail specific actions (scanning and attaching digital files) that would be part of preparing a patient's record for archiving, especially in a hybrid physical/electronic record system."
+      },
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 2,
+            "description": "Store the physical record in the appropriate file system"
+          }
+        ],
+        "response_steps": [
+          {
+            "step_number": 4,
+            "description": "Store the physical documents in the designated filing cabinet for secure retention."
+          }
+        ],
+        "match_type": "Functional Equivalence",
+        "confidence": 95,
+        "explanation": "Both steps describe the action of physically storing documents in a designated location for secure retention. 'Physical record' is equivalent to 'physical documents', and 'appropriate file system' is functionally equivalent to 'designated filing cabinet'."
+      },
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 3,
+            "description": "Update the database with the record's storage location"
+          }
+        ],
+        "response_steps": [
+          {
+            "step_number": 3,
+            "description": "Mark the registration record as 'Complete' and 'Archived' in the system."
+          }
+        ],
+        "match_type": "Functional Equivalence",
+        "confidence": 85,
+        "explanation": "The ground truth step focuses on updating the database with the record's storage location. The response step focuses on updating the system with the record's status ('Complete' and 'Archived'). While not explicitly mentioning 'location', marking a record as 'Archived' in the system serves a similar purpose of updating the system about its archival status and implicitly its availability/location within the archive system."
+      }
+    ],
+    "unmatched_ground_truth_steps": [],
+    "unmatched_response_steps": []
+  }
+}

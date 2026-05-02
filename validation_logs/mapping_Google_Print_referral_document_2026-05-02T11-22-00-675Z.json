@@ -1,0 +1,61 @@
+{
+  "timestamp": "2026-05-02T11-22-00-675Z",
+  "activity_name": "Print referral document",
+  "model": "Google",
+  "error": null,
+  "llm_result": {
+    "activity_name": "Print referral document",
+    "step_mappings": [
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 1,
+            "description": "Generate the referral document using the registered information"
+          }
+        ],
+        "response_steps": [
+          {
+            "step_number": 1,
+            "description": "Access the referral document generation function in the HIS."
+          },
+          {
+            "step_number": 2,
+            "description": "Generate the official registration confirmation document."
+          }
+        ],
+        "match_type": "Granularity Difference",
+        "confidence": 80,
+        "explanation": "Ground truth step 1 describes the overall process of generating the referral document. Response step 1 details accessing the relevant function, and response step 2 describes the actual generation. While there is a discrepancy in document naming (GT: 'referral document', R2: 'registration confirmation document'), given the context of 'registered information' and the activity name 'Print referral document', these response steps are considered more granular details of the generation process."
+      },
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 3,
+            "description": "Print the referral document"
+          }
+        ],
+        "response_steps": [
+          {
+            "step_number": 3,
+            "description": "Send the document to the printer."
+          },
+          {
+            "step_number": 4,
+            "description": "Retrieve the printed referral document from the printer."
+          }
+        ],
+        "match_type": "Granularity Difference",
+        "confidence": 95,
+        "explanation": "Ground truth step 3 describes the high-level action of printing. Response step 3 details sending the document to the printer, and response step 4 describes retrieving the physical output. These two response steps together constitute the action of printing, with response step 4 explicitly mentioning 'referral document', aligning with the ground truth."
+      }
+    ],
+    "unmatched_ground_truth_steps": [
+      {
+        "step_number": 2,
+        "description": "Review the document for accuracy and completeness",
+        "reason": "This step describes a review process that is not present in any of the response steps."
+      }
+    ],
+    "unmatched_response_steps": []
+  }
+}

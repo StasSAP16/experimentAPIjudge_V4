@@ -1,0 +1,64 @@
+{
+  "timestamp": "2026-05-02T11-21-43-403Z",
+  "activity_name": "Register the Surname of the patient",
+  "model": "Google",
+  "error": null,
+  "llm_result": {
+    "activity_name": "Register the Surname of the patient",
+    "step_mappings": [
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 1,
+            "description": "Ask the patient for their surname (last name)"
+          }
+        ],
+        "response_steps": [
+          {
+            "step_number": 1,
+            "description": "Read the patient's family name from the official identification document."
+          }
+        ],
+        "match_type": "Functional Equivalence",
+        "confidence": 85,
+        "explanation": "Both steps describe the action of obtaining the patient's surname. The ground truth specifies asking the patient, while the response specifies reading from an official document. Despite the different methods, the core function of acquiring the surname is equivalent."
+      },
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 2,
+            "description": "Confirm the spelling of the surname with the patient"
+          }
+        ],
+        "response_steps": [
+          {
+            "step_number": 3,
+            "description": "Confirm the spelling of the family name with the patient."
+          }
+        ],
+        "match_type": "Identical Match",
+        "confidence": 98,
+        "explanation": "The steps are nearly identical in meaning and wording. 'Surname' and 'family name' are synonyms, and the action of confirming spelling with the patient is the same."
+      },
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 3,
+            "description": "Enter the surname into the registration system"
+          }
+        ],
+        "response_steps": [
+          {
+            "step_number": 2,
+            "description": "Enter the family name into the HIS."
+          }
+        ],
+        "match_type": "Functional Equivalence",
+        "confidence": 95,
+        "explanation": "Both steps describe the action of entering the patient's surname into a system. 'Surname' and 'family name' are synonyms. 'Registration system' and 'HIS' (Hospital Information System) are specific types of systems that serve the same purpose in this context."
+      }
+    ],
+    "unmatched_ground_truth_steps": [],
+    "unmatched_response_steps": []
+  }
+}

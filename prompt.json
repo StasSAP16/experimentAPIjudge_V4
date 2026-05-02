@@ -12,7 +12,7 @@
       { "activity_id": "A3", "activity_name": "Register the Name of the patient", "description": "Record patient's legal first and middle name(s) from official ID" },
       { "activity_id": "A4", "activity_name": "Register the Surname of the patient", "description": "Record patient's family name for records and billing" },
       { "activity_id": "A5", "activity_name": "Print referral document", "description": "Generate and print official registration confirmation for consultation" },
-      { "activity_id": "A6", "activity_name": "Archive the registration record", "description": "Store completed registration record securely for compliance and retrieval" }
+      { "activity_id": "A6", "activity_name": "Archive the record in file system", "description": "Store completed registration record securely for compliance and retrieval" }
     ]
   },
   "output_format": {
@@ -32,6 +32,14 @@
       ]
     }
   },
+  "few_shot_learning": {
+    "activity_name": "Store and print notice",
+    "substeps": [
+      { "step_number": 1, "description": "Save notice in digital system" },
+      { "step_number": 2, "description": "Print physical copy of notice" },
+      { "step_number": 3, "description": "File printed notice" }
+    ]
+  },
   "decomposition_rules": {
     "granularity_rule": "Aim for 3 to 5 substeps per activity. Keep it minimal if the description is simple.",
     "atomicity_rule": "Each substep must be one observable staff action with one clear outcome.",
@@ -50,5 +58,5 @@
       "Name Integrity: activity_name MUST be copied verbatim from input — no modifications allowed."
     ]
   },
-  "final_instruction": "Process 'input.activities'. Apply all rules. Output ONLY a single JSON object with the key \"decomposition_result\" containing the array. CRITICAL: Every activity_name in your output must match the input activity_name EXACTLY, character-for-character. No markdown, no extra text, no explanations."
+  "final_instruction": "Process 'input.activities'. Apply all rules. Output ONLY a single JSON object with the key \"decomposition_result\" containing the array. CRITICAL: Every activity_name in your output must match the input activity_name EXACTLY, character-for-character. No markdown, no extra text, no explanations. Use the example in 'few_shot_learning' as a template for the structure and granularity of substeps."
 }
