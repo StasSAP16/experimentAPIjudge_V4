@@ -1,0 +1,73 @@
+{
+  "timestamp": "2026-05-03T21-13-11-710Z",
+  "activity_name": "Print referral document",
+  "model": "DeepSeek",
+  "error": null,
+  "llm_result": {
+    "activity_name": "Print referral document",
+    "step_mappings": [
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 1,
+            "description": "Generate the referral document using the registered information"
+          }
+        ],
+        "response_steps": [
+          {
+            "step_number": 1,
+            "description": "Navigate to the referral document generation screen in the HIS."
+          },
+          {
+            "step_number": 2,
+            "description": "Select the patient's record and confirm the registration details."
+          }
+        ],
+        "match_type": "Granularity Difference",
+        "confidence": 85,
+        "explanation": "The ground truth step 1 (generating the document) is a high-level action that encompasses the more detailed response steps 1 and 2 (navigating to the screen and selecting/confirming patient details)."
+      },
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 2,
+            "description": "Review the document for accuracy and completeness"
+          }
+        ],
+        "response_steps": [],
+        "match_type": "No Match",
+        "confidence": 100,
+        "explanation": "The ground truth includes a review step that is not explicitly mentioned in the response steps. The response steps focus on generation and printing without a separate review action."
+      },
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 3,
+            "description": "Print the referral document"
+          }
+        ],
+        "response_steps": [
+          {
+            "step_number": 3,
+            "description": "Click the print button to send the document to the printer."
+          },
+          {
+            "step_number": 4,
+            "description": "Retrieve the printed referral document from the printer and hand it to the patient."
+          }
+        ],
+        "match_type": "Granularity Difference",
+        "confidence": 90,
+        "explanation": "The ground truth step 3 (printing) is a high-level action that is broken down into two more detailed response steps: clicking the print button (step 3) and retrieving/handing over the document (step 4)."
+      }
+    ],
+    "unmatched_ground_truth_steps": [
+      {
+        "step_number": 2,
+        "description": "Review the document for accuracy and completeness",
+        "reason": "No corresponding step in the response explicitly describes a review or verification of the document before printing."
+      }
+    ],
+    "unmatched_response_steps": []
+  }
+}

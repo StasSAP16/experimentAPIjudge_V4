@@ -1,0 +1,109 @@
+{
+  "timestamp": "2026-05-03T21:18:20.289Z",
+  "average_tfi": {
+    "deepseek": 35.125,
+    "gemini": 50.208333333333336
+  },
+  "per_phrase_comparison": [
+    {
+      "phrase": "MUST EXACTLY MATCH",
+      "deepseek_tfi": 21.666666666666668,
+      "gemini_tfi": 55.333333333333336,
+      "delta_tfi": 33.667
+    },
+    {
+      "phrase": "decomposition_result",
+      "deepseek_tfi": 80,
+      "gemini_tfi": 73,
+      "delta_tfi": -7
+    },
+    {
+      "phrase": "Do NOT describe",
+      "deepseek_tfi": 16.666666666666668,
+      "gemini_tfi": 61.333333333333336,
+      "delta_tfi": 44.667
+    },
+    {
+      "phrase": "observable staff actions",
+      "deepseek_tfi": 20.666666666666668,
+      "gemini_tfi": 60,
+      "delta_tfi": 39.333
+    },
+    {
+      "phrase": "HIS",
+      "deepseek_tfi": 30,
+      "gemini_tfi": 15,
+      "delta_tfi": -15
+    },
+    {
+      "phrase": "scanner",
+      "deepseek_tfi": 53,
+      "gemini_tfi": 46,
+      "delta_tfi": -7
+    },
+    {
+      "phrase": "printer",
+      "deepseek_tfi": 34,
+      "gemini_tfi": 15,
+      "delta_tfi": -19
+    },
+    {
+      "phrase": "filing cabinet",
+      "deepseek_tfi": 25,
+      "gemini_tfi": 76,
+      "delta_tfi": 51
+    }
+  ],
+  "model_metrics": {
+    "deepseek": {
+      "Identical Match": {
+        "count": 0,
+        "percentage": 0
+      },
+      "Functional Equivalence": {
+        "count": 10,
+        "percentage": 55.56
+      },
+      "Granularity Difference": {
+        "count": 6,
+        "percentage": 33.33
+      },
+      "No Match": {
+        "count": 4,
+        "percentage": 22.22
+      },
+      "Extra (Unmatched Response)": {
+        "count": 0,
+        "percentage": 0
+      }
+    },
+    "gemini": {
+      "Identical Match": {
+        "count": 2,
+        "percentage": 9.09
+      },
+      "Functional Equivalence": {
+        "count": 11,
+        "percentage": 50
+      },
+      "Granularity Difference": {
+        "count": 3,
+        "percentage": 13.64
+      },
+      "No Match": {
+        "count": 8,
+        "percentage": 36.36
+      },
+      "Extra (Unmatched Response)": {
+        "count": 4,
+        "percentage": 18.18
+      }
+    }
+  },
+  "delta_analysis": {
+    "delta_tfi": 15.083,
+    "delta_no_match": 14.14,
+    "delta_granularity": -19.69,
+    "delta_functional": -5.56
+  }
+}

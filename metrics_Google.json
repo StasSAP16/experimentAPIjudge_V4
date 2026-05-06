@@ -1,0 +1,291 @@
+{
+  "model": "Google",
+  "totalGtSteps": 18,
+  "totalPredSteps": 23,
+  "coverage": 55.56,
+  "metrics": {
+    "Identical Match": {
+      "count": 2,
+      "percentage": 9.09
+    },
+    "Functional Equivalence": {
+      "count": 11,
+      "percentage": 50
+    },
+    "Granularity Difference": {
+      "count": 3,
+      "percentage": 13.64
+    },
+    "No Match": {
+      "count": 8,
+      "percentage": 36.36
+    },
+    "Extra (Unmatched Response)": {
+      "count": 4,
+      "percentage": 18.18
+    }
+  },
+  "detailedStats": {
+    "matched_by_exact": 6,
+    "matched_by_fuzzy": 0,
+    "not_found": 0,
+    "mappings": [
+      {
+        "activity": "Record the data of each patient",
+        "match_type": "Functional Equivalence",
+        "gt_steps": [
+          "Greet the patient and explain the registration process"
+        ],
+        "resp_steps": [
+          "Greet patient and request identification."
+        ],
+        "confidence": 90,
+        "explanation": "Both steps involve greeting the patient, but the ground truth includes explaining the registration process while the response specifies requesting identification. The core action of greeting is functionally equivalent."
+      },
+      {
+        "activity": "Record the data of each patient",
+        "match_type": "Functional Equivalence",
+        "gt_steps": [
+          "Prepare the registration form or system"
+        ],
+        "resp_steps": [
+          "Open HIS and navigate to new patient registration."
+        ],
+        "confidence": 95,
+        "explanation": "Both steps describe preparing the system for registration. The ground truth uses a general description ('prepare the registration form or system'), while the response specifies the exact system (HIS) and action (open and navigate). The intent is functionally equivalent."
+      },
+      {
+        "activity": "Record the data of each patient",
+        "match_type": "Granularity Difference",
+        "gt_steps": [
+          "Begin collecting patient information"
+        ],
+        "resp_steps": [
+          "Enter patient's basic demographic information into HIS.",
+          "Confirm data entry with patient."
+        ],
+        "confidence": 85,
+        "explanation": "The ground truth step 3 is a broad step covering the collection of patient information. The response breaks this into two more detailed steps: entering demographic information (step 3) and confirming with the patient (step 4). The ground truth step encompasses both response steps."
+      },
+      {
+        "activity": "Register the SSN of the patient",
+        "match_type": "Identical Match",
+        "gt_steps": [
+          "Ask the patient for their Social Security Number (SSN)"
+        ],
+        "resp_steps": [
+          "Request patient's Social Security Number."
+        ],
+        "confidence": 95,
+        "explanation": "Both steps describe the same action of asking/requesting the patient's SSN. The wording is nearly identical."
+      },
+      {
+        "activity": "Register the SSN of the patient",
+        "match_type": "Functional Equivalence",
+        "gt_steps": [
+          "Verify the SSN format for accuracy"
+        ],
+        "resp_steps": [
+          "Verify SSN for accuracy with patient."
+        ],
+        "confidence": 90,
+        "explanation": "Both steps involve verifying the SSN for accuracy. The ground truth focuses on format verification, while the response includes verification with the patient, but the core function is the same."
+      },
+      {
+        "activity": "Register the SSN of the patient",
+        "match_type": "Functional Equivalence",
+        "gt_steps": [
+          "Input the SSN into the registration system"
+        ],
+        "resp_steps": [
+          "Enter SSN into the designated field in HIS."
+        ],
+        "confidence": 95,
+        "explanation": "Both steps describe entering the SSN into a system. 'Input' and 'Enter' are synonyms, and 'registration system' is functionally equivalent to 'HIS' (Hospital Information System)."
+      },
+      {
+        "activity": "Register the Name of the patient",
+        "match_type": "Functional Equivalence",
+        "gt_steps": [
+          "Ask the patient for their first name"
+        ],
+        "resp_steps": [
+          "Request patient's official identification.",
+          "Read legal first and middle name(s) from ID."
+        ],
+        "confidence": 80,
+        "explanation": "Ground truth step 1 asks for the first name verbally, while response steps 1 and 2 together achieve the same outcome by requesting ID and reading the name from it. The approach differs but the functional goal is the same."
+      },
+      {
+        "activity": "Register the Name of the patient",
+        "match_type": "Functional Equivalence",
+        "gt_steps": [
+          "Confirm the spelling of the name with the patient"
+        ],
+        "resp_steps": [
+          "Read legal first and middle name(s) from ID."
+        ],
+        "confidence": 70,
+        "explanation": "Ground truth step 2 confirms spelling verbally, while response step 2 reads the name from an official ID, which inherently ensures correct spelling. Both aim to verify the name's accuracy."
+      },
+      {
+        "activity": "Register the Name of the patient",
+        "match_type": "Functional Equivalence",
+        "gt_steps": [
+          "Enter the name into the registration system"
+        ],
+        "resp_steps": [
+          "Enter first and middle name(s) into HIS."
+        ],
+        "confidence": 95,
+        "explanation": "Both steps describe entering the patient's name into a registration system (HIS vs. registration system). The action and outcome are functionally equivalent."
+      },
+      {
+        "activity": "Register the Name of the patient",
+        "match_type": "No Match",
+        "gt_steps": [],
+        "resp_steps": [
+          "Return identification to patient."
+        ],
+        "confidence": 100,
+        "explanation": "Response step 4 (returning ID) has no corresponding step in the ground truth, as the ground truth does not include handling of physical identification."
+      },
+      {
+        "activity": "Register the Surname of the patient",
+        "match_type": "Functional Equivalence",
+        "gt_steps": [
+          "Ask the patient for their surname (last name)"
+        ],
+        "resp_steps": [
+          "Request patient's official identification.",
+          "Read family name from ID."
+        ],
+        "confidence": 85,
+        "explanation": "Ground truth step 1 asks for the surname directly, while the response achieves the same outcome by requesting an ID and reading the family name from it. Both actions result in obtaining the surname."
+      },
+      {
+        "activity": "Register the Surname of the patient",
+        "match_type": "No Match",
+        "gt_steps": [
+          "Confirm the spelling of the surname with the patient"
+        ],
+        "resp_steps": [],
+        "confidence": 100,
+        "explanation": "The ground truth includes a step to confirm spelling, which is not present in the response steps."
+      },
+      {
+        "activity": "Register the Surname of the patient",
+        "match_type": "Identical Match",
+        "gt_steps": [
+          "Enter the surname into the registration system"
+        ],
+        "resp_steps": [
+          "Enter family name into HIS."
+        ],
+        "confidence": 95,
+        "explanation": "Both steps describe entering the surname into the hospital information system (HIS). The wording is nearly identical."
+      },
+      {
+        "activity": "Register the Surname of the patient",
+        "match_type": "No Match",
+        "gt_steps": [],
+        "resp_steps": [
+          "Return identification to patient."
+        ],
+        "confidence": 100,
+        "explanation": "The response includes a step to return the ID, which has no corresponding step in the ground truth."
+      },
+      {
+        "activity": "Print referral document",
+        "match_type": "Granularity Difference",
+        "gt_steps": [
+          "Generate the referral document using the registered information"
+        ],
+        "resp_steps": [
+          "Navigate to the referral document generation module in HIS.",
+          "Generate the official registration confirmation."
+        ],
+        "confidence": 70,
+        "explanation": "Ground truth step 1 (generating the referral document) is split into two response steps: navigating to the module and generating the document. However, the response step 2 mentions 'registration confirmation' instead of 'referral document', which suggests a different document type, reducing confidence."
+      },
+      {
+        "activity": "Print referral document",
+        "match_type": "No Match",
+        "gt_steps": [
+          "Review the document for accuracy and completeness"
+        ],
+        "resp_steps": [],
+        "confidence": 100,
+        "explanation": "The ground truth includes a review step that is not present in the response steps."
+      },
+      {
+        "activity": "Print referral document",
+        "match_type": "Functional Equivalence",
+        "gt_steps": [
+          "Print the referral document"
+        ],
+        "resp_steps": [
+          "Print the registration confirmation document."
+        ],
+        "confidence": 80,
+        "explanation": "Both steps describe printing a document, but the ground truth specifies 'referral document' while the response specifies 'registration confirmation document'. The action is functionally equivalent, but the document type differs."
+      },
+      {
+        "activity": "Print referral document",
+        "match_type": "No Match",
+        "gt_steps": [],
+        "resp_steps": [
+          "Hand printed document to patient."
+        ],
+        "confidence": 100,
+        "explanation": "The response includes an additional step of handing the document to the patient, which is not present in the ground truth."
+      },
+      {
+        "activity": "Archive the record in file system",
+        "match_type": "Granularity Difference",
+        "gt_steps": [
+          "Prepare the patient's record for archiving"
+        ],
+        "resp_steps": [
+          "Scan all physical registration documents using the document scanner."
+        ],
+        "confidence": 70,
+        "explanation": "Both steps involve preparing the record for archiving, but the response specifies scanning physical documents, which is a more detailed action. The ground truth step is broader and could encompass scanning as part of preparation."
+      },
+      {
+        "activity": "Archive the record in file system",
+        "match_type": "Functional Equivalence",
+        "gt_steps": [
+          "Store the physical record in the appropriate file system"
+        ],
+        "resp_steps": [
+          "File physical documents in the designated secure location."
+        ],
+        "confidence": 90,
+        "explanation": "Both steps describe storing the physical record in a file system or secure location. The ground truth uses 'appropriate file system' while the response uses 'designated secure location,' which are functionally equivalent."
+      },
+      {
+        "activity": "Archive the record in file system",
+        "match_type": "Functional Equivalence",
+        "gt_steps": [
+          "Update the database with the record's storage location"
+        ],
+        "resp_steps": [
+          "Confirm digital record is accessible in the file system."
+        ],
+        "confidence": 75,
+        "explanation": "Both steps involve verifying or updating the digital record's status in the system. The ground truth explicitly updates the database with the location, while the response confirms accessibility, which implies the record is properly stored and tracked."
+      },
+      {
+        "activity": "Archive the record in file system",
+        "match_type": "No Match",
+        "gt_steps": [],
+        "resp_steps": [
+          "Upload scanned documents to the digital file system."
+        ],
+        "confidence": 100,
+        "explanation": "The response includes a step for uploading scanned documents to a digital file system, which has no direct equivalent in the ground truth. The ground truth focuses on physical archiving and database updates, not digital uploads."
+      }
+    ]
+  }
+}

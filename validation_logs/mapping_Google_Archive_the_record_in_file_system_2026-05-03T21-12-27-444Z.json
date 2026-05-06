@@ -1,0 +1,82 @@
+{
+  "timestamp": "2026-05-03T21-12-27-444Z",
+  "activity_name": "Archive the record in file system",
+  "model": "Google",
+  "error": null,
+  "llm_result": {
+    "activity_name": "Archive the record in file system",
+    "step_mappings": [
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 1,
+            "description": "Prepare the patient's record for archiving"
+          }
+        ],
+        "response_steps": [
+          {
+            "step_number": 1,
+            "description": "Scan all physical registration documents using the document scanner."
+          }
+        ],
+        "match_type": "Granularity Difference",
+        "confidence": 70,
+        "explanation": "Both steps involve preparing the record for archiving, but the response specifies scanning physical documents, which is a more detailed action. The ground truth step is broader and could encompass scanning as part of preparation."
+      },
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 2,
+            "description": "Store the physical record in the appropriate file system"
+          }
+        ],
+        "response_steps": [
+          {
+            "step_number": 3,
+            "description": "File physical documents in the designated secure location."
+          }
+        ],
+        "match_type": "Functional Equivalence",
+        "confidence": 90,
+        "explanation": "Both steps describe storing the physical record in a file system or secure location. The ground truth uses 'appropriate file system' while the response uses 'designated secure location,' which are functionally equivalent."
+      },
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 3,
+            "description": "Update the database with the record's storage location"
+          }
+        ],
+        "response_steps": [
+          {
+            "step_number": 4,
+            "description": "Confirm digital record is accessible in the file system."
+          }
+        ],
+        "match_type": "Functional Equivalence",
+        "confidence": 75,
+        "explanation": "Both steps involve verifying or updating the digital record's status in the system. The ground truth explicitly updates the database with the location, while the response confirms accessibility, which implies the record is properly stored and tracked."
+      },
+      {
+        "ground_truth_steps": [],
+        "response_steps": [
+          {
+            "step_number": 2,
+            "description": "Upload scanned documents to the digital file system."
+          }
+        ],
+        "match_type": "No Match",
+        "confidence": 100,
+        "explanation": "The response includes a step for uploading scanned documents to a digital file system, which has no direct equivalent in the ground truth. The ground truth focuses on physical archiving and database updates, not digital uploads."
+      }
+    ],
+    "unmatched_ground_truth_steps": [],
+    "unmatched_response_steps": [
+      {
+        "step_number": 2,
+        "description": "Upload scanned documents to the digital file system.",
+        "reason": "This step describes a digital upload process that is not present in the ground truth, which focuses on physical archiving and database updates."
+      }
+    ]
+  }
+}

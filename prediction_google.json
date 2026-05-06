@@ -1,23 +1,23 @@
 [
   {
     "activity_id": "A1",
-    "activity_name": "Record the data of the patient",
+    "activity_name": "Record the data of each patient",
     "substeps": [
       {
         "step_number": 1,
-        "description": "Access the Hospital Information System (HIS)."
+        "description": "Greet patient and request identification."
       },
       {
         "step_number": 2,
-        "description": "Navigate to the new patient registration module."
+        "description": "Open HIS and navigate to new patient registration."
       },
       {
         "step_number": 3,
-        "description": "Enter basic demographic information provided by the patient into the HIS."
+        "description": "Enter patient's basic demographic information into HIS."
       },
       {
         "step_number": 4,
-        "description": "Save the initial patient record in the HIS."
+        "description": "Confirm data entry with patient."
       }
     ]
   },
@@ -27,15 +27,15 @@
     "substeps": [
       {
         "step_number": 1,
-        "description": "Request the patient's Social Security Number (SSN)."
+        "description": "Request patient's Social Security Number."
       },
       {
         "step_number": 2,
-        "description": "Enter the SSN into the designated field in the HIS."
+        "description": "Enter SSN into the designated field in HIS."
       },
       {
         "step_number": 3,
-        "description": "Verify the entered SSN for accuracy with the patient."
+        "description": "Verify SSN for accuracy with patient."
       }
     ]
   },
@@ -45,15 +45,19 @@
     "substeps": [
       {
         "step_number": 1,
-        "description": "Request the patient's official identification document."
+        "description": "Request patient's official identification."
       },
       {
         "step_number": 2,
-        "description": "Read the patient's legal first and middle name(s) from the ID."
+        "description": "Read legal first and middle name(s) from ID."
       },
       {
         "step_number": 3,
-        "description": "Enter the first and middle name(s) into the HIS."
+        "description": "Enter first and middle name(s) into HIS."
+      },
+      {
+        "step_number": 4,
+        "description": "Return identification to patient."
       }
     ]
   },
@@ -63,15 +67,19 @@
     "substeps": [
       {
         "step_number": 1,
-        "description": "Read the patient's family name from the official identification document."
+        "description": "Request patient's official identification."
       },
       {
         "step_number": 2,
-        "description": "Enter the family name into the HIS."
+        "description": "Read family name from ID."
       },
       {
         "step_number": 3,
-        "description": "Confirm the spelling of the family name with the patient."
+        "description": "Enter family name into HIS."
+      },
+      {
+        "step_number": 4,
+        "description": "Return identification to patient."
       }
     ]
   },
@@ -81,19 +89,19 @@
     "substeps": [
       {
         "step_number": 1,
-        "description": "Access the referral document generation function in the HIS."
+        "description": "Navigate to the referral document generation module in HIS."
       },
       {
         "step_number": 2,
-        "description": "Generate the official registration confirmation document."
+        "description": "Generate the official registration confirmation."
       },
       {
         "step_number": 3,
-        "description": "Send the document to the printer."
+        "description": "Print the registration confirmation document."
       },
       {
         "step_number": 4,
-        "description": "Retrieve the printed referral document from the printer."
+        "description": "Hand printed document to patient."
       }
     ]
   },
@@ -103,15 +111,19 @@
     "substeps": [
       {
         "step_number": 1,
-        "description": "Access the patient's completed registration record in the HIS."
+        "description": "Scan all physical registration documents using the document scanner."
       },
       {
         "step_number": 2,
-        "description": "Select the 'Archive Record' function within the HIS."
+        "description": "Upload scanned documents to the digital file system."
       },
       {
         "step_number": 3,
-        "description": "Confirm the successful archiving of the digital record."
+        "description": "File physical documents in the designated secure location."
+      },
+      {
+        "step_number": 4,
+        "description": "Confirm digital record is accessible in the file system."
       }
     ]
   }

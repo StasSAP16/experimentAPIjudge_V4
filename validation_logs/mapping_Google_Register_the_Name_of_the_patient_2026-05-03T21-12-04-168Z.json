@@ -1,0 +1,86 @@
+{
+  "timestamp": "2026-05-03T21-12-04-168Z",
+  "activity_name": "Register the Name of the patient",
+  "model": "Google",
+  "error": null,
+  "llm_result": {
+    "activity_name": "Register the Name of the patient",
+    "step_mappings": [
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 1,
+            "description": "Ask the patient for their first name"
+          }
+        ],
+        "response_steps": [
+          {
+            "step_number": 1,
+            "description": "Request patient's official identification."
+          },
+          {
+            "step_number": 2,
+            "description": "Read legal first and middle name(s) from ID."
+          }
+        ],
+        "match_type": "Functional Equivalence",
+        "confidence": 80,
+        "explanation": "Ground truth step 1 asks for the first name verbally, while response steps 1 and 2 together achieve the same outcome by requesting ID and reading the name from it. The approach differs but the functional goal is the same."
+      },
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 2,
+            "description": "Confirm the spelling of the name with the patient"
+          }
+        ],
+        "response_steps": [
+          {
+            "step_number": 2,
+            "description": "Read legal first and middle name(s) from ID."
+          }
+        ],
+        "match_type": "Functional Equivalence",
+        "confidence": 70,
+        "explanation": "Ground truth step 2 confirms spelling verbally, while response step 2 reads the name from an official ID, which inherently ensures correct spelling. Both aim to verify the name's accuracy."
+      },
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 3,
+            "description": "Enter the name into the registration system"
+          }
+        ],
+        "response_steps": [
+          {
+            "step_number": 3,
+            "description": "Enter first and middle name(s) into HIS."
+          }
+        ],
+        "match_type": "Functional Equivalence",
+        "confidence": 95,
+        "explanation": "Both steps describe entering the patient's name into a registration system (HIS vs. registration system). The action and outcome are functionally equivalent."
+      },
+      {
+        "ground_truth_steps": [],
+        "response_steps": [
+          {
+            "step_number": 4,
+            "description": "Return identification to patient."
+          }
+        ],
+        "match_type": "No Match",
+        "confidence": 100,
+        "explanation": "Response step 4 (returning ID) has no corresponding step in the ground truth, as the ground truth does not include handling of physical identification."
+      }
+    ],
+    "unmatched_ground_truth_steps": [],
+    "unmatched_response_steps": [
+      {
+        "step_number": 4,
+        "description": "Return identification to patient.",
+        "reason": "This step is not present in the ground truth process, which does not involve requesting or returning physical identification."
+      }
+    ]
+  }
+}

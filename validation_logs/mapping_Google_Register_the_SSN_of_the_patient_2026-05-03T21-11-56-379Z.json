@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-02T11-21-27-226Z",
+  "timestamp": "2026-05-03T21-11-56-379Z",
   "activity_name": "Register the SSN of the patient",
   "model": "Google",
   "error": null,
@@ -16,12 +16,12 @@
         "response_steps": [
           {
             "step_number": 1,
-            "description": "Request the patient's Social Security Number (SSN)."
+            "description": "Request patient's Social Security Number."
           }
         ],
         "match_type": "Identical Match",
-        "confidence": 100,
-        "explanation": "Both steps describe the action of obtaining the SSN from the patient using nearly identical phrasing ('Ask for' vs 'Request')."
+        "confidence": 95,
+        "explanation": "Both steps describe the same action of asking/requesting the patient's SSN. The wording is nearly identical."
       },
       {
         "ground_truth_steps": [
@@ -33,12 +33,12 @@
         "response_steps": [
           {
             "step_number": 3,
-            "description": "Verify the entered SSN for accuracy with the patient."
+            "description": "Verify SSN for accuracy with patient."
           }
         ],
         "match_type": "Functional Equivalence",
-        "confidence": 95,
-        "explanation": "Both steps focus on verifying the SSN for accuracy. The ground truth specifies 'format' while the response specifies 'with the patient', indicating slightly different methods or aspects of verification, but the core function of ensuring accuracy is the same."
+        "confidence": 90,
+        "explanation": "Both steps involve verifying the SSN for accuracy. The ground truth focuses on format verification, while the response includes verification with the patient, but the core function is the same."
       },
       {
         "ground_truth_steps": [
@@ -50,12 +50,12 @@
         "response_steps": [
           {
             "step_number": 2,
-            "description": "Enter the SSN into the designated field in the HIS."
+            "description": "Enter SSN into the designated field in HIS."
           }
         ],
         "match_type": "Functional Equivalence",
-        "confidence": 98,
-        "explanation": "Both steps describe the action of entering the SSN into a system. 'Input' is synonymous with 'Enter', and 'registration system' is functionally equivalent to 'HIS' (Hospital Information System) in this context."
+        "confidence": 95,
+        "explanation": "Both steps describe entering the SSN into a system. 'Input' and 'Enter' are synonyms, and 'registration system' is functionally equivalent to 'HIS' (Hospital Information System)."
       }
     ],
     "unmatched_ground_truth_steps": [],

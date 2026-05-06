@@ -1,0 +1,78 @@
+{
+  "timestamp": "2026-05-03T21-12-47-100Z",
+  "activity_name": "Record the data of each patient",
+  "model": "DeepSeek",
+  "error": null,
+  "llm_result": {
+    "activity_name": "Record the data of each patient",
+    "step_mappings": [
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 1,
+            "description": "Greet the patient and explain the registration process"
+          }
+        ],
+        "response_steps": [
+          {
+            "step_number": 1,
+            "description": "Open the Hospital Information System (HIS) and navigate to the patient registration module."
+          }
+        ],
+        "match_type": "No Match",
+        "confidence": 10,
+        "explanation": "The ground truth step involves patient interaction (greeting and explanation), while the response step is a system preparation action. They describe different aspects of the process."
+      },
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 2,
+            "description": "Prepare the registration form or system"
+          }
+        ],
+        "response_steps": [
+          {
+            "step_number": 1,
+            "description": "Open the Hospital Information System (HIS) and navigate to the patient registration module."
+          },
+          {
+            "step_number": 2,
+            "description": "Select the option to create a new patient record."
+          }
+        ],
+        "match_type": "Granularity Difference",
+        "confidence": 80,
+        "explanation": "The ground truth step 'Prepare the registration form or system' is a general preparation step. The response steps 1 and 2 provide more specific system actions (opening HIS, navigating, selecting create new record) that together fulfill the preparation."
+      },
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 3,
+            "description": "Begin collecting patient information"
+          }
+        ],
+        "response_steps": [
+          {
+            "step_number": 3,
+            "description": "Enter the patient's basic demographic information into the required fields."
+          },
+          {
+            "step_number": 4,
+            "description": "Review the entered data for accuracy and save the record."
+          }
+        ],
+        "match_type": "Granularity Difference",
+        "confidence": 85,
+        "explanation": "The ground truth step 'Begin collecting patient information' is a broad step that encompasses entering data and reviewing/saving. The response steps 3 and 4 break this down into more detailed actions."
+      }
+    ],
+    "unmatched_ground_truth_steps": [
+      {
+        "step_number": 1,
+        "description": "Greet the patient and explain the registration process",
+        "reason": "No corresponding step in the response that involves patient interaction or explanation."
+      }
+    ],
+    "unmatched_response_steps": []
+  }
+}

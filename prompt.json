@@ -7,7 +7,7 @@
   "input": {
     "process_name": "Patient Registers in the hospital",
     "activities": [
-      { "activity_id": "A1", "activity_name": "Record the data of the patient", "description": "Create initial patient record in the hospital information system and collect basic demographic information" },
+      { "activity_id": "A1", "activity_name": "Record the data of each patient", "description": "Create initial patient record in the hospital information system and collect basic demographic information" },
       { "activity_id": "A2", "activity_name": "Register the SSN of the patient", "description": "Capture and validate patient's Social Security Number for insurance and identification" },
       { "activity_id": "A3", "activity_name": "Register the Name of the patient", "description": "Record patient's legal first and middle name(s) from official ID" },
       { "activity_id": "A4", "activity_name": "Register the Surname of the patient", "description": "Record patient's family name for records and billing" },

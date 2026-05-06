@@ -1,0 +1,68 @@
+{
+  "timestamp": "2026-05-03T21-13-00-166Z",
+  "activity_name": "Register the Name of the patient",
+  "model": "DeepSeek",
+  "error": null,
+  "llm_result": {
+    "activity_name": "Register the Name of the patient",
+    "step_mappings": [
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 1,
+            "description": "Ask the patient for their first name"
+          }
+        ],
+        "response_steps": [
+          {
+            "step_number": 1,
+            "description": "Request the patient's official identification document (e.g., driver's license or passport)."
+          },
+          {
+            "step_number": 2,
+            "description": "Locate the patient's legal first and middle name(s) on the ID."
+          }
+        ],
+        "match_type": "Functional Equivalence",
+        "confidence": 80,
+        "explanation": "Both aim to obtain the patient's first name, but the ground truth asks the patient directly, while the response uses an official ID as the source. The response splits this into two steps (requesting the ID and locating the name), whereas the ground truth has a single step."
+      },
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 2,
+            "description": "Confirm the spelling of the name with the patient"
+          }
+        ],
+        "response_steps": [
+          {
+            "step_number": 4,
+            "description": "Double-check the spelling against the ID and save the entry."
+          }
+        ],
+        "match_type": "Functional Equivalence",
+        "confidence": 75,
+        "explanation": "Both involve verifying the spelling of the name. The ground truth confirms with the patient, while the response checks against the ID. The core action of spelling verification is functionally equivalent."
+      },
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 3,
+            "description": "Enter the name into the registration system"
+          }
+        ],
+        "response_steps": [
+          {
+            "step_number": 3,
+            "description": "Type the first and middle name(s) exactly as shown into the corresponding fields in the HIS."
+          }
+        ],
+        "match_type": "Functional Equivalence",
+        "confidence": 90,
+        "explanation": "Both describe entering the name into a system. The response is more specific about the system (HIS) and the fields (first and middle name), but the core action is the same."
+      }
+    ],
+    "unmatched_ground_truth_steps": [],
+    "unmatched_response_steps": []
+  }
+}

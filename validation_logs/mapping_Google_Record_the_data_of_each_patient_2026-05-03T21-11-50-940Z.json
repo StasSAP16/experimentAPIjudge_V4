@@ -1,0 +1,68 @@
+{
+  "timestamp": "2026-05-03T21-11-50-940Z",
+  "activity_name": "Record the data of each patient",
+  "model": "Google",
+  "error": null,
+  "llm_result": {
+    "activity_name": "Record the data of each patient",
+    "step_mappings": [
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 1,
+            "description": "Greet the patient and explain the registration process"
+          }
+        ],
+        "response_steps": [
+          {
+            "step_number": 1,
+            "description": "Greet patient and request identification."
+          }
+        ],
+        "match_type": "Functional Equivalence",
+        "confidence": 90,
+        "explanation": "Both steps involve greeting the patient, but the ground truth includes explaining the registration process while the response specifies requesting identification. The core action of greeting is functionally equivalent."
+      },
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 2,
+            "description": "Prepare the registration form or system"
+          }
+        ],
+        "response_steps": [
+          {
+            "step_number": 2,
+            "description": "Open HIS and navigate to new patient registration."
+          }
+        ],
+        "match_type": "Functional Equivalence",
+        "confidence": 95,
+        "explanation": "Both steps describe preparing the system for registration. The ground truth uses a general description ('prepare the registration form or system'), while the response specifies the exact system (HIS) and action (open and navigate). The intent is functionally equivalent."
+      },
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 3,
+            "description": "Begin collecting patient information"
+          }
+        ],
+        "response_steps": [
+          {
+            "step_number": 3,
+            "description": "Enter patient's basic demographic information into HIS."
+          },
+          {
+            "step_number": 4,
+            "description": "Confirm data entry with patient."
+          }
+        ],
+        "match_type": "Granularity Difference",
+        "confidence": 85,
+        "explanation": "The ground truth step 3 is a broad step covering the collection of patient information. The response breaks this into two more detailed steps: entering demographic information (step 3) and confirming with the patient (step 4). The ground truth step encompasses both response steps."
+      }
+    ],
+    "unmatched_ground_truth_steps": [],
+    "unmatched_response_steps": []
+  }
+}

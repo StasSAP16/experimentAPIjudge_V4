@@ -1,0 +1,68 @@
+{
+  "timestamp": "2026-05-03T21-12-53-712Z",
+  "activity_name": "Register the SSN of the patient",
+  "model": "DeepSeek",
+  "error": null,
+  "llm_result": {
+    "activity_name": "Register the SSN of the patient",
+    "step_mappings": [
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 1,
+            "description": "Ask the patient for their Social Security Number (SSN)"
+          }
+        ],
+        "response_steps": [
+          {
+            "step_number": 1,
+            "description": "Ask the patient for their Social Security Number (SSN) and request their official ID for verification."
+          }
+        ],
+        "match_type": "Functional Equivalence",
+        "confidence": 90,
+        "explanation": "Both steps involve asking the patient for their SSN. The response step adds requesting official ID, which is an additional detail but does not change the core action."
+      },
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 2,
+            "description": "Verify the SSN format for accuracy"
+          }
+        ],
+        "response_steps": [
+          {
+            "step_number": 3,
+            "description": "Verify the entered SSN matches the official ID and confirm no errors."
+          }
+        ],
+        "match_type": "Functional Equivalence",
+        "confidence": 85,
+        "explanation": "Both steps involve verification of the SSN. The ground truth focuses on format accuracy, while the response focuses on matching with official ID and error confirmation. The core verification intent is functionally equivalent."
+      },
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 3,
+            "description": "Input the SSN into the registration system"
+          }
+        ],
+        "response_steps": [
+          {
+            "step_number": 2,
+            "description": "Enter the SSN into the designated field in the HIS."
+          },
+          {
+            "step_number": 4,
+            "description": "Save the SSN entry in the patient record."
+          }
+        ],
+        "match_type": "Granularity Difference",
+        "confidence": 80,
+        "explanation": "The ground truth step combines entering and saving the SSN into one action. The response splits this into two separate steps: entering into the HIS field and saving the record. The scope differs in granularity."
+      }
+    ],
+    "unmatched_ground_truth_steps": [],
+    "unmatched_response_steps": []
+  }
+}

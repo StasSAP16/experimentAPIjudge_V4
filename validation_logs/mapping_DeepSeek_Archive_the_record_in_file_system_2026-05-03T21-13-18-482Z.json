@@ -1,0 +1,72 @@
+{
+  "timestamp": "2026-05-03T21-13-18-482Z",
+  "activity_name": "Archive the record in file system",
+  "model": "DeepSeek",
+  "error": null,
+  "llm_result": {
+    "activity_name": "Archive the record in file system",
+    "step_mappings": [
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 1,
+            "description": "Prepare the patient's record for archiving"
+          }
+        ],
+        "response_steps": [
+          {
+            "step_number": 1,
+            "description": "Ensure the patient record is complete and saved in the HIS."
+          },
+          {
+            "step_number": 2,
+            "description": "Scan any paper documents (e.g., signed forms) using the document scanner."
+          },
+          {
+            "step_number": 3,
+            "description": "Attach the scanned documents to the patient's electronic record in the HIS."
+          }
+        ],
+        "match_type": "Granularity Difference",
+        "confidence": 80,
+        "explanation": "Ground truth step 1 is a high-level preparation step. The response breaks this down into three specific sub-steps: ensuring completeness, scanning paper documents, and attaching them to the electronic record."
+      },
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 2,
+            "description": "Store the physical record in the appropriate file system"
+          }
+        ],
+        "response_steps": [
+          {
+            "step_number": 4,
+            "description": "Confirm the record is archived and accessible for future retrieval."
+          }
+        ],
+        "match_type": "Functional Equivalence",
+        "confidence": 70,
+        "explanation": "Ground truth step 2 focuses on storing the physical record, while response step 4 confirms the record is archived and accessible. Both relate to the finalization of archiving, but the ground truth emphasizes physical storage, whereas the response emphasizes confirmation of electronic accessibility."
+      },
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 3,
+            "description": "Update the database with the record's storage location"
+          }
+        ],
+        "response_steps": [
+          {
+            "step_number": 4,
+            "description": "Confirm the record is archived and accessible for future retrieval."
+          }
+        ],
+        "match_type": "Functional Equivalence",
+        "confidence": 65,
+        "explanation": "Ground truth step 3 involves updating the database with the storage location, which is a specific action to ensure traceability. Response step 4 confirms the record is archived and accessible, which implies the database has been updated, but the wording is more general."
+      }
+    ],
+    "unmatched_ground_truth_steps": [],
+    "unmatched_response_steps": []
+  }
+}

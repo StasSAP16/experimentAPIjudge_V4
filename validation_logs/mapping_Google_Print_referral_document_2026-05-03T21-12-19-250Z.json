@@ -1,0 +1,87 @@
+{
+  "timestamp": "2026-05-03T21-12-19-250Z",
+  "activity_name": "Print referral document",
+  "model": "Google",
+  "error": null,
+  "llm_result": {
+    "activity_name": "Print referral document",
+    "step_mappings": [
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 1,
+            "description": "Generate the referral document using the registered information"
+          }
+        ],
+        "response_steps": [
+          {
+            "step_number": 1,
+            "description": "Navigate to the referral document generation module in HIS."
+          },
+          {
+            "step_number": 2,
+            "description": "Generate the official registration confirmation."
+          }
+        ],
+        "match_type": "Granularity Difference",
+        "confidence": 70,
+        "explanation": "Ground truth step 1 (generating the referral document) is split into two response steps: navigating to the module and generating the document. However, the response step 2 mentions 'registration confirmation' instead of 'referral document', which suggests a different document type, reducing confidence."
+      },
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 2,
+            "description": "Review the document for accuracy and completeness"
+          }
+        ],
+        "response_steps": [],
+        "match_type": "No Match",
+        "confidence": 100,
+        "explanation": "The ground truth includes a review step that is not present in the response steps."
+      },
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 3,
+            "description": "Print the referral document"
+          }
+        ],
+        "response_steps": [
+          {
+            "step_number": 3,
+            "description": "Print the registration confirmation document."
+          }
+        ],
+        "match_type": "Functional Equivalence",
+        "confidence": 80,
+        "explanation": "Both steps describe printing a document, but the ground truth specifies 'referral document' while the response specifies 'registration confirmation document'. The action is functionally equivalent, but the document type differs."
+      },
+      {
+        "ground_truth_steps": [],
+        "response_steps": [
+          {
+            "step_number": 4,
+            "description": "Hand printed document to patient."
+          }
+        ],
+        "match_type": "No Match",
+        "confidence": 100,
+        "explanation": "The response includes an additional step of handing the document to the patient, which is not present in the ground truth."
+      }
+    ],
+    "unmatched_ground_truth_steps": [
+      {
+        "step_number": 2,
+        "description": "Review the document for accuracy and completeness",
+        "reason": "No corresponding step in the response that involves reviewing or checking the document."
+      }
+    ],
+    "unmatched_response_steps": [
+      {
+        "step_number": 4,
+        "description": "Hand printed document to patient.",
+        "reason": "No corresponding step in the ground truth for handing the document to the patient."
+      }
+    ]
+  }
+}

@@ -1,0 +1,257 @@
+{
+  "model": "DeepSeek",
+  "totalGtSteps": 18,
+  "totalPredSteps": 23,
+  "coverage": 77.78,
+  "metrics": {
+    "Identical Match": {
+      "count": 0,
+      "percentage": 0
+    },
+    "Functional Equivalence": {
+      "count": 10,
+      "percentage": 55.56
+    },
+    "Granularity Difference": {
+      "count": 6,
+      "percentage": 33.33
+    },
+    "No Match": {
+      "count": 4,
+      "percentage": 22.22
+    },
+    "Extra (Unmatched Response)": {
+      "count": 0,
+      "percentage": 0
+    }
+  },
+  "detailedStats": {
+    "matched_by_exact": 6,
+    "matched_by_fuzzy": 0,
+    "not_found": 0,
+    "mappings": [
+      {
+        "activity": "Record the data of each patient",
+        "match_type": "No Match",
+        "gt_steps": [
+          "Greet the patient and explain the registration process"
+        ],
+        "resp_steps": [
+          "Open the Hospital Information System (HIS) and navigate to the patient registration module."
+        ],
+        "confidence": 10,
+        "explanation": "The ground truth step involves patient interaction (greeting and explanation), while the response step is a system preparation action. They describe different aspects of the process."
+      },
+      {
+        "activity": "Record the data of each patient",
+        "match_type": "Granularity Difference",
+        "gt_steps": [
+          "Prepare the registration form or system"
+        ],
+        "resp_steps": [
+          "Open the Hospital Information System (HIS) and navigate to the patient registration module.",
+          "Select the option to create a new patient record."
+        ],
+        "confidence": 80,
+        "explanation": "The ground truth step 'Prepare the registration form or system' is a general preparation step. The response steps 1 and 2 provide more specific system actions (opening HIS, navigating, selecting create new record) that together fulfill the preparation."
+      },
+      {
+        "activity": "Record the data of each patient",
+        "match_type": "Granularity Difference",
+        "gt_steps": [
+          "Begin collecting patient information"
+        ],
+        "resp_steps": [
+          "Enter the patient's basic demographic information into the required fields.",
+          "Review the entered data for accuracy and save the record."
+        ],
+        "confidence": 85,
+        "explanation": "The ground truth step 'Begin collecting patient information' is a broad step that encompasses entering data and reviewing/saving. The response steps 3 and 4 break this down into more detailed actions."
+      },
+      {
+        "activity": "Register the SSN of the patient",
+        "match_type": "Functional Equivalence",
+        "gt_steps": [
+          "Ask the patient for their Social Security Number (SSN)"
+        ],
+        "resp_steps": [
+          "Ask the patient for their Social Security Number (SSN) and request their official ID for verification."
+        ],
+        "confidence": 90,
+        "explanation": "Both steps involve asking the patient for their SSN. The response step adds requesting official ID, which is an additional detail but does not change the core action."
+      },
+      {
+        "activity": "Register the SSN of the patient",
+        "match_type": "Functional Equivalence",
+        "gt_steps": [
+          "Verify the SSN format for accuracy"
+        ],
+        "resp_steps": [
+          "Verify the entered SSN matches the official ID and confirm no errors."
+        ],
+        "confidence": 85,
+        "explanation": "Both steps involve verification of the SSN. The ground truth focuses on format accuracy, while the response focuses on matching with official ID and error confirmation. The core verification intent is functionally equivalent."
+      },
+      {
+        "activity": "Register the SSN of the patient",
+        "match_type": "Granularity Difference",
+        "gt_steps": [
+          "Input the SSN into the registration system"
+        ],
+        "resp_steps": [
+          "Enter the SSN into the designated field in the HIS.",
+          "Save the SSN entry in the patient record."
+        ],
+        "confidence": 80,
+        "explanation": "The ground truth step combines entering and saving the SSN into one action. The response splits this into two separate steps: entering into the HIS field and saving the record. The scope differs in granularity."
+      },
+      {
+        "activity": "Register the Name of the patient",
+        "match_type": "Functional Equivalence",
+        "gt_steps": [
+          "Ask the patient for their first name"
+        ],
+        "resp_steps": [
+          "Request the patient's official identification document (e.g., driver's license or passport).",
+          "Locate the patient's legal first and middle name(s) on the ID."
+        ],
+        "confidence": 80,
+        "explanation": "Both aim to obtain the patient's first name, but the ground truth asks the patient directly, while the response uses an official ID as the source. The response splits this into two steps (requesting the ID and locating the name), whereas the ground truth has a single step."
+      },
+      {
+        "activity": "Register the Name of the patient",
+        "match_type": "Functional Equivalence",
+        "gt_steps": [
+          "Confirm the spelling of the name with the patient"
+        ],
+        "resp_steps": [
+          "Double-check the spelling against the ID and save the entry."
+        ],
+        "confidence": 75,
+        "explanation": "Both involve verifying the spelling of the name. The ground truth confirms with the patient, while the response checks against the ID. The core action of spelling verification is functionally equivalent."
+      },
+      {
+        "activity": "Register the Name of the patient",
+        "match_type": "Functional Equivalence",
+        "gt_steps": [
+          "Enter the name into the registration system"
+        ],
+        "resp_steps": [
+          "Type the first and middle name(s) exactly as shown into the corresponding fields in the HIS."
+        ],
+        "confidence": 90,
+        "explanation": "Both describe entering the name into a system. The response is more specific about the system (HIS) and the fields (first and middle name), but the core action is the same."
+      },
+      {
+        "activity": "Register the Surname of the patient",
+        "match_type": "Functional Equivalence",
+        "gt_steps": [
+          "Ask the patient for their surname (last name)"
+        ],
+        "resp_steps": [
+          "Refer to the patient's official identification document for the surname."
+        ],
+        "confidence": 80,
+        "explanation": "Both steps aim to obtain the patient's surname, but the ground truth asks the patient verbally while the response refers to an official ID document."
+      },
+      {
+        "activity": "Register the Surname of the patient",
+        "match_type": "Functional Equivalence",
+        "gt_steps": [
+          "Confirm the spelling of the surname with the patient"
+        ],
+        "resp_steps": [
+          "Verify the surname matches the ID exactly and save the record."
+        ],
+        "confidence": 70,
+        "explanation": "Both steps involve verification of the surname, but the ground truth confirms spelling with the patient, while the response verifies against the ID document."
+      },
+      {
+        "activity": "Register the Surname of the patient",
+        "match_type": "Functional Equivalence",
+        "gt_steps": [
+          "Enter the surname into the registration system"
+        ],
+        "resp_steps": [
+          "Enter the surname into the surname field in the HIS."
+        ],
+        "confidence": 95,
+        "explanation": "Both steps describe entering the surname into a system (registration system vs. HIS)."
+      },
+      {
+        "activity": "Print referral document",
+        "match_type": "Granularity Difference",
+        "gt_steps": [
+          "Generate the referral document using the registered information"
+        ],
+        "resp_steps": [
+          "Navigate to the referral document generation screen in the HIS.",
+          "Select the patient's record and confirm the registration details."
+        ],
+        "confidence": 85,
+        "explanation": "The ground truth step 1 (generating the document) is a high-level action that encompasses the more detailed response steps 1 and 2 (navigating to the screen and selecting/confirming patient details)."
+      },
+      {
+        "activity": "Print referral document",
+        "match_type": "No Match",
+        "gt_steps": [
+          "Review the document for accuracy and completeness"
+        ],
+        "resp_steps": [],
+        "confidence": 100,
+        "explanation": "The ground truth includes a review step that is not explicitly mentioned in the response steps. The response steps focus on generation and printing without a separate review action."
+      },
+      {
+        "activity": "Print referral document",
+        "match_type": "Granularity Difference",
+        "gt_steps": [
+          "Print the referral document"
+        ],
+        "resp_steps": [
+          "Click the print button to send the document to the printer.",
+          "Retrieve the printed referral document from the printer and hand it to the patient."
+        ],
+        "confidence": 90,
+        "explanation": "The ground truth step 3 (printing) is a high-level action that is broken down into two more detailed response steps: clicking the print button (step 3) and retrieving/handing over the document (step 4)."
+      },
+      {
+        "activity": "Archive the record in file system",
+        "match_type": "Granularity Difference",
+        "gt_steps": [
+          "Prepare the patient's record for archiving"
+        ],
+        "resp_steps": [
+          "Ensure the patient record is complete and saved in the HIS.",
+          "Scan any paper documents (e.g., signed forms) using the document scanner.",
+          "Attach the scanned documents to the patient's electronic record in the HIS."
+        ],
+        "confidence": 80,
+        "explanation": "Ground truth step 1 is a high-level preparation step. The response breaks this down into three specific sub-steps: ensuring completeness, scanning paper documents, and attaching them to the electronic record."
+      },
+      {
+        "activity": "Archive the record in file system",
+        "match_type": "Functional Equivalence",
+        "gt_steps": [
+          "Store the physical record in the appropriate file system"
+        ],
+        "resp_steps": [
+          "Confirm the record is archived and accessible for future retrieval."
+        ],
+        "confidence": 70,
+        "explanation": "Ground truth step 2 focuses on storing the physical record, while response step 4 confirms the record is archived and accessible. Both relate to the finalization of archiving, but the ground truth emphasizes physical storage, whereas the response emphasizes confirmation of electronic accessibility."
+      },
+      {
+        "activity": "Archive the record in file system",
+        "match_type": "Functional Equivalence",
+        "gt_steps": [
+          "Update the database with the record's storage location"
+        ],
+        "resp_steps": [
+          "Confirm the record is archived and accessible for future retrieval."
+        ],
+        "confidence": 65,
+        "explanation": "Ground truth step 3 involves updating the database with the storage location, which is a specific action to ensure traceability. Response step 4 confirms the record is archived and accessible, which implies the database has been updated, but the wording is more general."
+      }
+    ]
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "timestamp": "2026-05-03T21-12-11-706Z",
+  "activity_name": "Register the Surname of the patient",
+  "model": "Google",
+  "error": null,
+  "llm_result": {
+    "activity_name": "Register the Surname of the patient",
+    "step_mappings": [
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 1,
+            "description": "Ask the patient for their surname (last name)"
+          }
+        ],
+        "response_steps": [
+          {
+            "step_number": 1,
+            "description": "Request patient's official identification."
+          },
+          {
+            "step_number": 2,
+            "description": "Read family name from ID."
+          }
+        ],
+        "match_type": "Functional Equivalence",
+        "confidence": 85,
+        "explanation": "Ground truth step 1 asks for the surname directly, while the response achieves the same outcome by requesting an ID and reading the family name from it. Both actions result in obtaining the surname."
+      },
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 2,
+            "description": "Confirm the spelling of the surname with the patient"
+          }
+        ],
+        "response_steps": [],
+        "match_type": "No Match",
+        "confidence": 100,
+        "explanation": "The ground truth includes a step to confirm spelling, which is not present in the response steps."
+      },
+      {
+        "ground_truth_steps": [
+          {
+            "step_number": 3,
+            "description": "Enter the surname into the registration system"
+          }
+        ],
+        "response_steps": [
+          {
+            "step_number": 3,
+            "description": "Enter family name into HIS."
+          }
+        ],
+        "match_type": "Identical Match",
+        "confidence": 95,
+        "explanation": "Both steps describe entering the surname into the hospital information system (HIS). The wording is nearly identical."
+      },
+      {
+        "ground_truth_steps": [],
+        "response_steps": [
+          {
+            "step_number": 4,
+            "description": "Return identification to patient."
+          }
+        ],
+        "match_type": "No Match",
+        "confidence": 100,
+        "explanation": "The response includes a step to return the ID, which has no corresponding step in the ground truth."
+      }
+    ],
+    "unmatched_ground_truth_steps": [
+      {
+        "step_number": 2,
+        "description": "Confirm the spelling of the surname with the patient",
+        "reason": "No equivalent step exists in the response; the response relies on reading the name from an ID, which may not require spelling confirmation."
+      }
+    ],
+    "unmatched_response_steps": [
+      {
+        "step_number": 4,
+        "description": "Return identification to patient.",
+        "reason": "The ground truth does not include any step about returning identification, as it assumes the surname is obtained directly from the patient."
+      }
+    ]
+  }
+}

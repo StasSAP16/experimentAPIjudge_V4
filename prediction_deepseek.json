@@ -1,23 +1,23 @@
 [
   {
     "activity_id": "A1",
-    "activity_name": "Record the data of the patient",
+    "activity_name": "Record the data of each patient",
     "substeps": [
       {
         "step_number": 1,
-        "description": "Open the Hospital Information System (HIS) and select the 'New Patient Registration' module."
+        "description": "Open the Hospital Information System (HIS) and navigate to the patient registration module."
       },
       {
         "step_number": 2,
-        "description": "Enter the patient's basic demographic information into the required fields."
+        "description": "Select the option to create a new patient record."
       },
       {
         "step_number": 3,
-        "description": "Verify the entered data for accuracy and completeness."
+        "description": "Enter the patient's basic demographic information into the required fields."
       },
       {
         "step_number": 4,
-        "description": "Save the initial patient record in the HIS."
+        "description": "Review the entered data for accuracy and save the record."
       }
     ]
   },
@@ -27,7 +27,7 @@
     "substeps": [
       {
         "step_number": 1,
-        "description": "Request the patient's Social Security Number (SSN) from their official identification document."
+        "description": "Ask the patient for their Social Security Number (SSN) and request their official ID for verification."
       },
       {
         "step_number": 2,
@@ -35,11 +35,11 @@
       },
       {
         "step_number": 3,
-        "description": "Validate the SSN format and check for any duplicate records."
+        "description": "Verify the entered SSN matches the official ID and confirm no errors."
       },
       {
         "step_number": 4,
-        "description": "Confirm the SSN entry and save the record."
+        "description": "Save the SSN entry in the patient record."
       }
     ]
   },
@@ -49,19 +49,19 @@
     "substeps": [
       {
         "step_number": 1,
-        "description": "Ask the patient for their legal first and middle name(s) as shown on their official ID."
+        "description": "Request the patient's official identification document (e.g., driver's license or passport)."
       },
       {
         "step_number": 2,
-        "description": "Type the first name into the 'First Name' field in the HIS."
+        "description": "Locate the patient's legal first and middle name(s) on the ID."
       },
       {
         "step_number": 3,
-        "description": "Type the middle name(s) into the 'Middle Name' field in the HIS."
+        "description": "Type the first and middle name(s) exactly as shown into the corresponding fields in the HIS."
       },
       {
         "step_number": 4,
-        "description": "Review the entered name for spelling errors and correct if necessary."
+        "description": "Double-check the spelling against the ID and save the entry."
       }
     ]
   },
@@ -71,19 +71,15 @@
     "substeps": [
       {
         "step_number": 1,
-        "description": "Ask the patient for their legal surname (family name) as shown on their official ID."
+        "description": "Refer to the patient's official identification document for the surname."
       },
       {
         "step_number": 2,
-        "description": "Type the surname into the 'Last Name' field in the HIS."
+        "description": "Enter the surname into the surname field in the HIS."
       },
       {
         "step_number": 3,
-        "description": "Verify the spelling against the ID document."
-      },
-      {
-        "step_number": 4,
-        "description": "Save the surname entry in the patient record."
+        "description": "Verify the surname matches the ID exactly and save the record."
       }
     ]
   },
@@ -93,19 +89,19 @@
     "substeps": [
       {
         "step_number": 1,
-        "description": "Navigate to the 'Print Referral' option in the HIS."
+        "description": "Navigate to the referral document generation screen in the HIS."
       },
       {
         "step_number": 2,
-        "description": "Select the correct patient record and confirm the referral details."
+        "description": "Select the patient's record and confirm the registration details."
       },
       {
         "step_number": 3,
-        "description": "Click 'Print' to generate the referral document on the connected printer."
+        "description": "Click the print button to send the document to the printer."
       },
       {
         "step_number": 4,
-        "description": "Retrieve the printed document from the printer and hand it to the patient."
+        "description": "Retrieve the printed referral document from the printer and hand it to the patient."
       }
     ]
   },
@@ -115,19 +111,19 @@
     "substeps": [
       {
         "step_number": 1,
-        "description": "Scan any paper documents (e.g., signed forms) using the document scanner."
+        "description": "Ensure the patient record is complete and saved in the HIS."
       },
       {
         "step_number": 2,
-        "description": "Attach the scanned files to the patient's electronic record in the HIS."
+        "description": "Scan any paper documents (e.g., signed forms) using the document scanner."
       },
       {
         "step_number": 3,
-        "description": "Mark the registration record as 'Complete' and 'Archived' in the system."
+        "description": "Attach the scanned documents to the patient's electronic record in the HIS."
       },
       {
         "step_number": 4,
-        "description": "Store the physical documents in the designated filing cabinet for secure retention."
+        "description": "Confirm the record is archived and accessible for future retrieval."
       }
     ]
   }
